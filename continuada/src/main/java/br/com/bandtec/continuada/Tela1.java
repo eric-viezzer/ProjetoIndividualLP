@@ -5,18 +5,21 @@
  */
 package br.com.bandtec.continuada;
 
+
+import java.util.concurrent.ThreadLocalRandom;
+
+
+
 /**
  *
  * @author Pichau
  */
 public class Tela1 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Tela1
-     */
+
     public Tela1() {
         initComponents();
-    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -33,16 +36,27 @@ public class Tela1 extends javax.swing.JFrame {
         lbMemoria = new javax.swing.JLabel();
         lbCPU = new javax.swing.JLabel();
         lbDisc = new javax.swing.JLabel();
-        btLeitura = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gerador de Dados");
         setBackground(new java.awt.Color(214, 168, 247));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setResizable(false);
         getContentPane().setLayout(null);
+
+        Barra3.setForeground(new java.awt.Color(0, 0, 0));
         getContentPane().add(Barra3);
         Barra3.setBounds(60, 280, 530, 30);
+
+        Barra1.setForeground(new java.awt.Color(0, 0, 0));
         getContentPane().add(Barra1);
         Barra1.setBounds(60, 100, 530, 30);
+
+        Barra2.setForeground(new java.awt.Color(0, 0, 0));
         getContentPane().add(Barra2);
         Barra2.setBounds(60, 190, 530, 30);
 
@@ -61,14 +75,22 @@ public class Tela1 extends javax.swing.JFrame {
         getContentPane().add(lbDisc);
         lbDisc.setBounds(60, 160, 80, 30);
 
-        btLeitura.setText("Leitura de dados");
-        getContentPane().add(btLeitura);
-        btLeitura.setBounds(210, 350, 200, 30);
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Rockwell", 0, 24)); // NOI18N
         jLabel5.setText("Gerador de dados");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(220, 0, 210, 50);
+        jLabel5.setBounds(210, 10, 210, 50);
+
+        jLabel1.setText("max (100)");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(540, 80, 50, 14);
+
+        jLabel2.setText("max (100)");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(540, 260, 50, 14);
+
+        jLabel3.setText("max (100)");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(540, 170, 50, 14);
 
         setSize(new java.awt.Dimension(663, 429));
         setLocationRelativeTo(null);
@@ -113,10 +135,16 @@ public class Tela1 extends javax.swing.JFrame {
     private javax.swing.JProgressBar Barra1;
     private javax.swing.JProgressBar Barra2;
     private javax.swing.JProgressBar Barra3;
-    private javax.swing.JButton btLeitura;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel lbCPU;
     private javax.swing.JLabel lbDisc;
     private javax.swing.JLabel lbMemoria;
     // End of variables declaration//GEN-END:variables
+
+    private void initComponents() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
